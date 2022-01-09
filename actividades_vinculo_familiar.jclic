@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="actividades_vinculo_familiar" version="0.1.3">
+ <settings>
+  <title>Actividades vinculo familiar</title>
+  <revision description="created" date="10/11/21" />
+  <descriptors />
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es" />
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="start" name="Sopa letras" />
+  <item name="rompecabezas" />
+ </sequence>
+ <activities>
+  <activity class="@textGrid.WordSearch" name="Sopa letras" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Completa la sopa de letras</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Lo lograste</p>
+    </cell>
+    <cell type="finalError">
+     <style />
+     <p>Vuelve a intentarlo</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <textGrid rows="14" columns="14" cellWidth="23.0" cellHeight="21.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>ABCNPERMISIVO*</row>
+     <row>DEFAMILIA**I**</row>
+     <row>GHI*S******N**</row>
+     <row>*AMOR******C**</row>
+     <row>**J****RED*U**</row>
+     <row>*I*********L**</row>
+     <row>H****MAMA**O**</row>
+     <row>ACOMPAÑAMIENTO</row>
+     <row>******A*****M*</row>
+     <row>******P*****O*</row>
+     <row>DEMOCRATICO*R*</row>
+     <row>******P*******</row>
+     <row>EDUCACION*****</row>
+     <row>*******VALORES</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">DEMOCRATICO</clue>
+    <clue id="1">PERMISIVO</clue>
+    <clue id="2">FAMILIA</clue>
+    <clue id="3">VINCULO</clue>
+    <clue id="4">EDUCACION</clue>
+    <clue id="5">RED</clue>
+    <clue id="6">HIJOS</clue>
+    <clue id="7">MAMA</clue>
+    <clue id="8">PAPA</clue>
+    <clue id="9">AMOR</clue>
+    <clue id="10">ACOMPAÑAMIENTO</clue>
+    <clue id="11">VALORES</clue>
+    <clue id="12">AUTORITARIO</clue>
+   </clues>
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="rompecabezas" code="">
+   <description>
+    <p>Complete el siguiente rompecabezas</p>
+   </description>
+   <messages />
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0x99FF33" dest="0xCCFF33" angle="43" cycles="4" />
+    </window>
+    <skin file="@simple.xml" />
+   </settings>
+   <cells rows="5" cols="5" border="true" image="familia.jpg">
+    <style />
+    <shaper class="@Rectangular" cols="5" rows="5" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="familia.jpg" file="familia.jpg" />
+ </mediaBag>
+</JClicProject>
+
